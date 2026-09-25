@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -214,6 +213,10 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 .ext-link:hover{border-color:var(--mint-border);color:var(--mint);}
 .skip-btn{background:transparent;color:var(--muted);border:1px solid var(--border);padding:.7rem 1rem;font-family:var(--mono);font-size:.58rem;cursor:pointer;}
 .skip-btn:hover{color:var(--white);border-color:var(--mint-border);}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}
+.compare-label{font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem;}
+.compare-label.bad{color:var(--red);}
+.compare-label.good{color:var(--mint);}
 
 @media(max-width:900px){.case-win{width:calc(100vw - 24px);left:12px;transform:none;height:calc(100vh - 90px);top:40px;}}
 @media(max-width:768px){
@@ -223,6 +226,7 @@ body{cursor:auto;}
 .gen-footer{padding:1rem;}
 .workflow{grid-template-columns:repeat(3,1fr);}
 .case-grid{grid-template-columns:1fr;}
+.compare-grid{grid-template-columns:1fr;}
 .icons-grid{gap:1rem;padding:1rem;}
 .desk-icon{width:60px;}
 .di-bg{width:44px;height:44px;font-size:1.2rem;}
@@ -337,6 +341,11 @@ body{cursor:auto;}
     <div class="di-label">GenAI Lab</div>
   </div>
 
+  <div class="desk-icon" onclick="openWin('webflow')" role="button" tabindex="0">
+    <div class="di-bg" style="background:rgba(0,255,157,.08);">🔄</div>
+    <div class="di-label">Migration</div>
+  </div>
+
 </div>
 
   </div>
@@ -351,6 +360,7 @@ body{cursor:auto;}
     <div class="tb-sep"></div>
     <div class="tb-icon" title="AI Chat" onclick="openWin('terminal')" id="tbTerm">💬</div>
     <div class="tb-icon" title="GenAI Lab" onclick="openWin('genai')">🧪</div>
+    <div class="tb-icon" title="Webflow Migration" onclick="openWin('webflow')">🔄</div>
   </div>
 
   <!-- HINT -->
@@ -545,12 +555,12 @@ body{cursor:auto;}
           <div class="pw-card">
             <div class="pw-tag">// Multilingual</div>
             <div class="pw-title">Multilingual Image Translation</div>
-            <div class="pw-desc">100+ UI images translated across 10 Indian regional languages with review for accuracy and UI fit.</div>
+            <div class="pw-desc">Translated and reviewed 100+ UI images across 10 Indian regional languages — checked for translation accuracy, UI fit, and terminology consistency.</div>
           </div>
-          <div class="pw-card">
-            <div class="pw-tag">// Webflow</div>
+          <div class="pw-card" onclick="openWin('webflow')" style="cursor:pointer;">
+            <div class="pw-tag">// Webflow · Case Study</div>
             <div class="pw-title">WordPress → Webflow Migration</div>
-            <div class="pw-desc">Migrated and optimized 38 WordPress pages to Webflow while maintaining SEO. Representative screenshots document the work.</div>
+            <div class="pw-desc">Migrated and optimized 38 WordPress pages to Webflow, working alongside a teammate, with before/after screenshots.</div>
           </div>
           <div class="pw-card">
             <div class="pw-tag">// CMS</div>
@@ -583,7 +593,7 @@ body{cursor:auto;}
         <div class="case-hero">
           <div class="case-kicker">// GENAI CASE STUDY</div>
           <div class="case-title">K–12 Science Prompt Framework & AI Content QA</div>
-          <div class="case-copy">A practical example of how I structure prompts, evaluate AI output, refine constraints, and validate K–12 learning content.</div>
+          <div class="case-copy">A practical example of how I structure prompts, evaluate AI output, refine constraints, and validate K–12 learning content. Self-directed practice exercise — not official CK-12 work.</div>
           <div class="link-row">
             <a class="ext-link" href="https://www.linkedin.com/in/priyadharshini-c-g/" target="_blank" rel="noopener">LinkedIn ↗</a>
             <a class="ext-link" href="mailto:cgpriyadharshinigopi@gmail.com">Email ↗</a>
@@ -607,15 +617,28 @@ body{cursor:auto;}
           <div class="case-grid">
             <div class="case-card">
               <h4>Reusable K–12 concept prompt</h4>
-              <div class="case-code">ROLE: K–12 Science content developer for Grade 8 Science
+              <div class="case-code">ROLE:
+K–12 Science educator specialising in Grade 8 Physical Science
 
-TASK: Generate a concept explanation for [TOPIC]
+TASK:
+Generate a concept explanation for [TOPIC]
 
-CONSTRAINTS: simple language for age 13–14 · 180–220 words · flowing paragraphs · address a common misconception
+CONSTRAINTS:
+– Simple language for a 13–14 year old student
+– Avoid jargon unless it's curriculum vocabulary — define it immediately
+– Length: 180–220 words
+– No bullet points — flowing paragraphs only
+– Address a common student misconception
 
-TONE: Friendly, clear, encouraging
+TONE:
+Friendly, clear, encouraging — like a great teacher explaining for the first time
 
-OUTPUT: hook → concept → equation/process → misconception → one-sentence summary</div>
+OUTPUT FORMAT:
+¶1 Real-world hook
+¶2 Core concept explained simply
+¶3 Equation/process explained step by step
+¶4 Common misconception addressed
+¶5 One-sentence summary</div>
             </div>
             <div class="case-card">
               <h4>QC rubric I designed</h4>
@@ -633,15 +656,15 @@ TOTAL .................... /10</div>
         <div class="case-section">
           <div class="case-section-title">Before → After Prompt Refinement</div>
           <div class="case-card">
-            <p style="margin-bottom:.6rem;"><strong style="color:var(--red);">Initial:</strong> “Explain photosynthesis for students.”</p>
-            <p style="margin-bottom:.7rem;">Issues identified: language too advanced, no real-world hook, no misconception check, and textbook-like tone.</p>
+            <p style="margin-bottom:.6rem;"><strong style="color:var(--red);">Initial:</strong> "Explain photosynthesis for students."</p>
+            <p style="margin-bottom:.7rem;">Issues identified: no grade-level target, output used bullet points and headers despite needing flowing paragraphs, no misconception check, no word-count control.</p>
             <p><strong style="color:var(--mint);">After:</strong> A structured Grade 8 prompt with explicit tone, word count, equation, misconception, and output requirements.</p>
           </div>
         </div>
 
         <div class="case-section">
           <div class="case-section-title">Project Evidence</div>
-          <img class="case-image" src="assets/genai-before-after.png" alt="Before and after AI output comparison for a Grade 8 photosynthesis explanation" onclick="openImage(this.src,this.alt)"/>
+          <img class="case-image" src="assets/genai-before-after.png" alt="Before and after AI output comparison for a Grade 8 photosynthesis explanation, showing raw AI output, flagged problems, refined output, and a QC checklist scoring 10 out of 10" onclick="openImage(this.src,this.alt)"/>
           <div class="case-caption">Before/after comparison showing the initial AI output, issues identified, refined output, and QC checklist.</div>
         </div>
 
@@ -667,6 +690,84 @@ TOTAL .................... /10</div>
             <span class="aw-pill">CK-12 FlexBook Alignment</span>
             <span class="aw-pill">ChatGPT</span>
             <span class="aw-pill">Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEBFLOW MIGRATION CASE STUDY WINDOW -->
+
+  <div class="win case-win" id="win-webflow" style="top:75px;">
+    <div class="win-chrome" id="wc-webflow">
+      <div class="win-dots">
+        <button class="wd r" type="button" onclick="closeWin('webflow')" aria-label="Close Webflow Migration window" title="Close window">×</button>
+        <div class="wd y"></div>
+        <div class="wd g"></div>
+      </div>
+      <div class="win-title">Migration — WordPress to Webflow</div>
+    </div>
+    <div class="win-body">
+      <div class="case-body">
+        <div class="case-hero">
+          <div class="case-kicker">// WEBFLOW CASE STUDY</div>
+          <div class="case-title">CK-12 Website Migration — WordPress to Webflow</div>
+          <div class="case-copy">Rebuilt CK-12's public website from WordPress to Webflow, working alongside a teammate. Migrated and optimized 38 pages while maintaining SEO, and corrected UI issues carried over from the old site.</div>
+          <div class="link-row">
+            <a class="ext-link" href="https://www.linkedin.com/in/priyadharshini-c-g/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="ext-link" href="mailto:cgpriyadharshinigopi@gmail.com">Email ↗</a>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">What changed</div>
+          <div class="case-grid">
+            <div class="case-card"><h4>Navigation</h4><p>Simplified menu structure and updated login/account flow.</p></div>
+            <div class="case-card"><h4>Visual design</h4><p>Updated color palette, typography, and button styling across pages.</p></div>
+            <div class="case-card"><h4>Footer</h4><p>Reorganized footer links for clarity and consistency.</p></div>
+            <div class="case-card"><h4>UI fixes</h4><p>Identified and corrected broken/missing icon assets and layout issues carried over from the old site.</p></div>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Practice Comparison Page</div>
+          <div class="compare-grid">
+            <div>
+              <div class="compare-label bad">Before — WordPress</div>
+              <img class="case-image" src="assets/webflow-page1-before.png" alt="CK-12 practice comparison page before migration, on the old WordPress site" onclick="openImage(this.src,this.alt)"/>
+            </div>
+            <div>
+              <div class="compare-label good">After — Webflow</div>
+              <img class="case-image" src="assets/webflow-page1-after.png" alt="CK-12 practice comparison page after migration, on the new Webflow site" onclick="openImage(this.src,this.alt)"/>
+            </div>
+          </div>
+          <div class="case-caption">Same page, rebuilt: updated navigation, color palette, and table styling.</div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Our Story / Timeline Page</div>
+          <div class="compare-grid">
+            <div>
+              <div class="compare-label bad">Before — WordPress</div>
+              <img class="case-image" src="assets/webflow-page2-before.png" alt="CK-12 company timeline page before migration, on the old WordPress site" onclick="openImage(this.src,this.alt)"/>
+            </div>
+            <div>
+              <div class="compare-label good">After — Webflow</div>
+              <img class="case-image" src="assets/webflow-page2-after.png" alt="CK-12 company timeline page after migration, on the new Webflow site" onclick="openImage(this.src,this.alt)"/>
+            </div>
+          </div>
+          <div class="case-caption">The old version showed the timeline as static text; the rebuilt version presents it as an interactive, expandable timeline.</div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Skills demonstrated</div>
+          <div class="aw-pills">
+            <span class="aw-pill">Webflow</span>
+            <span class="aw-pill">UI/UX Review</span>
+            <span class="aw-pill">Website Migration</span>
+            <span class="aw-pill">SEO</span>
+            <span class="aw-pill">Cross-browser QA</span>
+            <span class="aw-pill">HTML/CSS</span>
           </div>
         </div>
       </div>
@@ -1140,7 +1241,8 @@ const wins={
   projects:'win-projects',
   skills:'win-skills',
   terminal:'win-terminal',
-  genai:'win-genai'
+  genai:'win-genai',
+  webflow:'win-webflow'
 };
 
 function openWin(name){
@@ -1309,7 +1411,7 @@ const aiResponses={
     "My GenAI work focuses on prompt frameworks, content templates, QC rubrics, and reviewing AI-generated K–12 content. I test and refine prompts based on output quality to improve accuracy, consistency, relevance, and grade-level suitability.",
 
   'tell me about your webflow work':
-    "I build and maintain Webflow pages at CK-12 Foundation. One of my main projects was migrating 38 WordPress pages to Webflow while maintaining SEO. I also build responsive landing pages from Figma designs using HTML, CSS, JavaScript, and React.",
+    "I build and maintain Webflow pages at CK-12 Foundation. One of my main projects was migrating 38 WordPress pages to Webflow while maintaining SEO, working alongside a teammate. I also build responsive landing pages from Figma designs using HTML, CSS, JavaScript, and React.",
 
   'what are your skills':
     "My GenAI skills include Generative AI, LLM Prompting, Prompt Design, Prompt Frameworks & Templates, Content Playbooks, QC Rubrics, and AI Content Evaluation. My web skills include Webflow, HTML5, CSS3, JavaScript, React, Bootstrap, PHP, and WordPress. I also work with Figma, SEO, CMS, and K–12 learning content.",
