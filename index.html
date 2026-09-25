@@ -4,7 +4,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Priyadharshini C G — Priya.OS</title>
+<title>Priyadharshini C G — Webflow Engineer | Generative AI Learning Content Developer</title>
+<meta name="description" content="Portfolio of Priyadharshini C G — Webflow Engineer and Generative AI Learning Content Developer focused on prompt design, LLM prompting, AI content evaluation, and K–12 learning content."/>
+<meta name="theme-color" content="#07070f"/>
+<meta property="og:title" content="Priyadharshini C G — Webflow Engineer | Generative AI Learning Content Developer"/>
+<meta property="og:description" content="Prompt design, LLM prompting, AI content evaluation, K–12 learning content, and Webflow development."/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -18,7 +22,7 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hidden;cursor:none;height:100vh;width:100vw;}
+body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hidden;cursor:auto;height:100vh;width:100vw;}
 
 /* CURSOR */
 #cur{position:fixed;width:3px;height:16px;background:var(--mint);pointer-events:none;z-index:99999;transform:translate(-50%,-50%);animation:blink .9s step-end infinite;}
@@ -95,8 +99,8 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 .mb-open{font-size:.55rem;letter-spacing:.06em;padding:.15rem .5rem;border:1px solid var(--mint-border);color:var(--mint);border-radius:1px;}
 
 .desktop{position:absolute;inset:28px 0 52px 0;z-index:1;}
-.icons-grid{display:flex;flex-direction:column;gap:1.5rem;padding:1.5rem;align-items:flex-start;flex-wrap:wrap;height:100%;}
-.desk-icon{display:flex;flex-direction:column;align-items:center;gap:.4rem;cursor:none;width:72px;transition:transform .15s;}
+.icons-grid{display:flex;flex-direction:column;gap:1.5rem;padding:1.5rem;align-items:flex-start;flex-wrap:nowrap;height:100%;}
+.desk-icon{display:flex;flex-direction:column;align-items:center;gap:.4rem;cursor:pointer;width:72px;transition:transform .15s;}
 .desk-icon:hover{transform:scale(1.08);}
 .desk-icon:hover .di-label{color:var(--white);}
 .di-bg{width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(4px);position:relative;}
@@ -115,8 +119,9 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 .win.focused{border-color:rgba(255,255,255,.18);z-index:300;}
 .win-chrome{display:flex;align-items:center;gap:.5rem;padding:.6rem .9rem;background:rgba(255,255,255,.03);border-bottom:1px solid var(--border);flex-shrink:0;cursor:move;user-select:none;}
 .win-dots{display:flex;gap:.3rem;}
-.wd{width:10px;height:10px;border-radius:50%;}
-.wd.r{background:var(--red);cursor:none;}
+.wd{width:11px;height:11px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:0;padding:0;font-family:Arial,sans-serif;font-size:8px;line-height:1;color:transparent;flex-shrink:0;}
+.wd.r{background:var(--red);cursor:pointer;color:transparent;transition:transform .15s,filter .15s;}
+.wd.r:hover,.wd.r:focus-visible{color:#4a0000;transform:scale(1.15);filter:brightness(1.08);outline:none;}
 .wd.y{background:var(--yellow);}
 .wd.g{background:var(--green);}
 .win-title{font-size:.58rem;letter-spacing:.1em;color:var(--muted);margin:0 auto;}
@@ -183,7 +188,41 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 .notify.show{opacity:1;transform:translateX(0);}
 .notify strong{color:var(--white);display:block;margin-bottom:.2rem;}
 
+
+/* CASE STUDY / GENAI */
+.case-win{width:760px;height:620px;top:55px;left:50%;transform:translateX(-50%);}
+.case-body{padding:1.1rem 1.2rem 2rem;}
+.case-hero{padding:.9rem;background:linear-gradient(135deg,rgba(0,255,157,.06),rgba(201,168,76,.05));border:1px solid var(--border);margin-bottom:1rem;}
+.case-kicker{font-size:.5rem;letter-spacing:.12em;color:var(--mint);margin-bottom:.35rem;}
+.case-title{font-family:var(--serif);font-size:1.25rem;color:var(--white);margin-bottom:.35rem;}
+.case-copy{font-size:.6rem;line-height:1.7;color:var(--muted);}
+.case-section{margin-top:1rem;}
+.case-section-title{font-size:.55rem;letter-spacing:.12em;color:var(--mint);text-transform:uppercase;margin-bottom:.55rem;}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;}
+.case-card{padding:.8rem;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:4px;}
+.case-card h4{font-family:var(--serif);font-size:.85rem;color:var(--white);margin-bottom:.35rem;}
+.case-card p{font-size:.57rem;line-height:1.65;color:var(--muted);}
+.case-code{font-size:.56rem;line-height:1.7;color:var(--white);background:#090912;border:1px solid var(--border);padding:.7rem;overflow:auto;white-space:pre-wrap;}
+.case-image{width:100%;display:block;border:1px solid var(--border);border-radius:4px;background:#090912;cursor:pointer;}
+.case-image:hover{border-color:var(--mint-border);}
+.case-caption{font-size:.48rem;color:var(--dim);margin-top:.35rem;line-height:1.5;}
+.workflow{display:grid;grid-template-columns:repeat(6,1fr);gap:.35rem;}
+.workflow-step{padding:.55rem .3rem;text-align:center;border:1px solid var(--border);color:var(--muted);font-size:.48rem;line-height:1.4;}
+.workflow-step span{display:block;color:var(--mint);font-size:.7rem;margin-bottom:.2rem;}
+.link-row{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem;}
+.ext-link{display:inline-flex;align-items:center;padding:.35rem .6rem;border:1px solid var(--border);color:var(--muted);text-decoration:none;font-size:.52rem;letter-spacing:.05em;}
+.ext-link:hover{border-color:var(--mint-border);color:var(--mint);}
+.skip-btn{background:transparent;color:var(--muted);border:1px solid var(--border);padding:.7rem 1rem;font-family:var(--mono);font-size:.58rem;cursor:pointer;}
+.skip-btn:hover{color:var(--white);border-color:var(--mint-border);}
+
+@media(max-width:900px){.case-win{width:calc(100vw - 24px);left:12px;transform:none;height:calc(100vh - 90px);top:40px;}}
 @media(max-width:768px){
+body{cursor:auto;}
+#cur,#cur2{display:none;}
+.prompt-scroll{padding:1.5rem 1rem 0;}
+.gen-footer{padding:1rem;}
+.workflow{grid-template-columns:repeat(3,1fr);}
+.case-grid{grid-template-columns:1fr;}
 .icons-grid{gap:1rem;padding:1rem;}
 .desk-icon{width:60px;}
 .di-bg{width:44px;height:44px;font-size:1.2rem;}
@@ -215,10 +254,11 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
     <div class="gen-hint">// <em>Prompt loaded.</em> Review above, then generate your portfolio.</div>
     <div class="gen-row">
       <button class="btn-gen" id="btnGen" onclick="startGen()">Generate Portfolio →</button>
+      <button class="skip-btn" onclick="skipIntro()">Skip to Portfolio</button>
       <div class="meta-pills">
-        <div class="meta-p">tokens: <span>263</span></div>
-        <div class="meta-p">model: <span>portfolio demo</span></div>
-        <div class="meta-p">temp: <span>0.7</span></div>
+        <div class="meta-p">mode: <span>portfolio demo</span></div>
+        <div class="meta-p">focus: <span>GenAI + Webflow</span></div>
+        <div class="meta-p">status: <span>ready</span></div>
       </div>
     </div>
   </div>
@@ -249,7 +289,6 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="menubar">
     <div class="mb-logo">Priya.OS</div>
 
-```
 <div class="mb-items">
   <div class="mb-item">File</div>
   <div class="mb-item">View</div>
@@ -260,7 +299,6 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="mb-open" id="mbOpen">✦ Open to Work</div>
   <div class="mb-clock" id="mbClock">--:--</div>
 </div>
-```
 
   </div>
 
@@ -269,34 +307,37 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="desktop">
     <div class="icons-grid">
 
-```
-  <div class="desk-icon" ondblclick="openWin('about')">
+  <div class="desk-icon" onclick="openWin('about')" role="button" tabindex="0">
     <div class="di-bg" style="background:rgba(201,168,76,.12);">👩‍💻</div>
     <div class="di-label">About.me</div>
   </div>
 
-  <div class="desk-icon" ondblclick="openWin('resume')">
+  <div class="desk-icon" onclick="openWin('resume')" role="button" tabindex="0">
     <div class="di-bg" style="background:rgba(0,255,157,.08);">📄</div>
     <div class="di-label">Resume.pdf</div>
   </div>
 
-  <div class="desk-icon" ondblclick="openWin('projects')">
+  <div class="desk-icon" onclick="openWin('projects')" role="button" tabindex="0">
     <div class="di-bg" style="background:rgba(121,192,255,.08);">🚀</div>
     <div class="di-label">Projects</div>
   </div>
 
-  <div class="desk-icon" ondblclick="openWin('skills')">
+  <div class="desk-icon" onclick="openWin('skills')" role="button" tabindex="0">
     <div class="di-bg" style="background:rgba(255,159,67,.08);">⚡</div>
     <div class="di-label">Skills.exe</div>
   </div>
 
-  <div class="desk-icon" ondblclick="openWin('terminal')">
+  <div class="desk-icon" onclick="openWin('terminal')" role="button" tabindex="0">
     <div class="di-bg" style="background:rgba(0,255,157,.05);">💬</div>
     <div class="di-label">Chat.ai</div>
   </div>
 
+  <div class="desk-icon" onclick="openWin('genai')" role="button" tabindex="0">
+    <div class="di-bg" style="background:rgba(121,192,255,.08);">🧪</div>
+    <div class="di-label">GenAI Lab</div>
+  </div>
+
 </div>
-```
 
   </div>
 
@@ -309,12 +350,13 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
     <div class="tb-icon" title="Skills" onclick="openWin('skills')">⚡</div>
     <div class="tb-sep"></div>
     <div class="tb-icon" title="AI Chat" onclick="openWin('terminal')" id="tbTerm">💬</div>
+    <div class="tb-icon" title="GenAI Lab" onclick="openWin('genai')">🧪</div>
   </div>
 
   <!-- HINT -->
 
   <div style="position:absolute;bottom:62px;left:50%;transform:translateX(-50%);font-size:.55rem;letter-spacing:.1em;color:var(--dim);text-align:center;z-index:10;pointer-events:none;">
-    double-click icons to open · drag windows · chat with AI
+    click icons to open · drag windows · use × to close · explore GenAI work
   </div>
 
   <!-- ABOUT WINDOW -->
@@ -322,27 +364,26 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="win" id="win-about" style="width:420px;height:440px;top:60px;left:80px;">
     <div class="win-chrome" id="wc-about">
       <div class="win-dots">
-        <div class="wd r" onclick="closeWin('about')"></div>
+        <button class="wd r" type="button" onclick="closeWin('about')" aria-label="Close About window" title="Close window">×</button>
         <div class="wd y"></div>
         <div class="wd g"></div>
       </div>
       <div class="win-title">About.me</div>
     </div>
 
-```
 <div class="win-body">
   <div class="about-win-body">
 
     <div class="aw-name">Priya<strong>dharshini</strong> C G</div>
 
     <div class="aw-title">
-      Generative AI Learning Content Developer · Prompt Engineer · Webflow Engineer
+      Webflow Engineer | Generative AI Learning Content Developer
     </div>
 
     <div class="aw-desc">
       3+ years of experience across web development and GenAI learning content.
-      Currently at CK-12 Foundation, working on prompt frameworks, content playbooks,
-      AI content evaluation, and K–12 learning content alongside Webflow development.
+      At CK-12 Foundation, I work on prompt frameworks, content templates, AI content evaluation,
+      K–12 learning content, and Webflow development.
     </div>
 
     <div class="aw-stats">
@@ -365,13 +406,12 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
     <div class="aw-pills">
       <span class="aw-pill">Madurai, TN, India</span>
       <span class="aw-pill">MCA Graduate</span>
-      <span class="aw-pill">Google Cloud Certified</span>
+      <span class="aw-pill">Google Cloud: GenAI Fundamentals</span>
       <span class="aw-pill">Open to Work</span>
     </div>
 
   </div>
 </div>
-```
 
   </div>
 
@@ -380,14 +420,13 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="win" id="win-resume" style="width:380px;height:500px;top:60px;left:540px;">
     <div class="win-chrome" id="wc-resume">
       <div class="win-dots">
-        <div class="wd r" onclick="closeWin('resume')"></div>
+        <button class="wd r" type="button" onclick="closeWin('resume')" aria-label="Close Resume window" title="Close window">×</button>
         <div class="wd y"></div>
         <div class="wd g"></div>
       </div>
-      <div class="win-title">Resume.pdf</div>
+      <div class="win-title">Resume</div>
     </div>
 
-```
 <div class="win-body">
   <div class="resume-win-body">
 
@@ -401,7 +440,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
     <div style="font-size:.65rem;color:var(--muted);line-height:1.75;">
       3+ years across web development and GenAI learning content.
-      Currently working on prompt frameworks, Content Playbooks,
+      Currently working on prompt frameworks, content templates,
       AI content evaluation, and K–12 Science and Math content at CK-12 Foundation.
     </div>
 
@@ -476,75 +515,168 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
     <div style="font-size:.65rem;color:var(--muted);line-height:1.7;">
       Google Cloud: Generative AI Fundamentals<br/>
-      DeepLearning.AI: Prompt Engineering for Developers
+      DeepLearning.AI: Prompt Engineering for Developers — in progress
     </div>
 
   </div>
 </div>
-```
 
   </div>
 
   <!-- PROJECTS WINDOW -->
 
-  <div class="win" id="win-projects" style="width:460px;height:360px;top:200px;left:160px;">
+  <div class="win" id="win-projects" style="width:500px;height:470px;top:150px;left:120px;">
     <div class="win-chrome" id="wc-projects">
       <div class="win-dots">
-        <div class="wd r" onclick="closeWin('projects')"></div>
+        <button class="wd r" type="button" onclick="closeWin('projects')" aria-label="Close Projects window" title="Close window">×</button>
         <div class="wd y"></div>
         <div class="wd g"></div>
       </div>
       <div class="win-title">Projects</div>
     </div>
-
-```
-<div class="win-body">
-  <div class="proj-win-body">
-
-    <div class="pw-grid">
-
-      <div class="pw-card">
-        <div class="pw-tag">// GenAI</div>
-        <div class="pw-title">GenAI Content Playbook — CK-12</div>
-        <div class="pw-desc">
-          Prompt frameworks, content blueprints, quality-control rubrics,
-          and checklists for AI-generated K–12 learning content.
+    <div class="win-body">
+      <div class="proj-win-body">
+        <div class="pw-grid">
+          <div class="pw-card" onclick="openWin('genai')" style="cursor:pointer;">
+            <div class="pw-tag">// GenAI · Case Study</div>
+            <div class="pw-title">K–12 Science Prompt Framework & AI Content QA</div>
+            <div class="pw-desc">Prompt template, QC rubric, before/after refinement, and grade-level content evaluation.</div>
+          </div>
+          <div class="pw-card">
+            <div class="pw-tag">// Multilingual</div>
+            <div class="pw-title">Multilingual Image Translation</div>
+            <div class="pw-desc">100+ UI images translated across 10 Indian regional languages with review for accuracy and UI fit.</div>
+          </div>
+          <div class="pw-card">
+            <div class="pw-tag">// Webflow</div>
+            <div class="pw-title">WordPress → Webflow Migration</div>
+            <div class="pw-desc">Migrated and optimized 38 WordPress pages to Webflow while maintaining SEO. Representative screenshots document the work.</div>
+          </div>
+          <div class="pw-card">
+            <div class="pw-tag">// CMS</div>
+            <div class="pw-title">Teacher Testimonial Blogs</div>
+            <div class="pw-desc">Built and managed CMS-driven testimonial content in Webflow, including structured page content and media.</div>
+          </div>
+          <div class="pw-card">
+            <div class="pw-tag">// Meta</div>
+            <div class="pw-title">This Portfolio — Priya.OS</div>
+            <div class="pw-desc">An OS-style portfolio experience designed to present web development and GenAI work in one place.</div>
+          </div>
         </div>
       </div>
-
-      <div class="pw-card">
-        <div class="pw-tag">// Interactive</div>
-        <div class="pw-title">AI Prompt Playground</div>
-        <div class="pw-desc">
-          Real prompt examples with before-and-after outputs,
-          showing how prompts can be tested and refined for better results.
-        </div>
-      </div>
-
-      <div class="pw-card">
-        <div class="pw-tag">// Webflow</div>
-        <div class="pw-title">WordPress → Webflow Migration</div>
-        <div class="pw-desc">
-          Migrated 38 WordPress pages to Webflow while maintaining SEO
-          and creating reusable page structures for future migration work.
-        </div>
-      </div>
-
-      <div class="pw-card">
-        <div class="pw-tag">// Meta</div>
-        <div class="pw-title">This Portfolio — Priya.OS</div>
-        <div class="pw-desc">
-          A portfolio that opens as a prompt, generates itself,
-          and runs as an OS. You're inside it right now.
-        </div>
-      </div>
-
     </div>
-
   </div>
-</div>
-```
 
+  <!-- GENAI CASE STUDY WINDOW -->
+
+  <div class="win case-win" id="win-genai">
+    <div class="win-chrome" id="wc-genai">
+      <div class="win-dots">
+        <button class="wd r" type="button" onclick="closeWin('genai')" aria-label="Close GenAI Lab window" title="Close window">×</button>
+        <div class="wd y"></div>
+        <div class="wd g"></div>
+      </div>
+      <div class="win-title">GenAI Lab — K–12 Science</div>
+    </div>
+    <div class="win-body">
+      <div class="case-body">
+        <div class="case-hero">
+          <div class="case-kicker">// GENAI CASE STUDY</div>
+          <div class="case-title">K–12 Science Prompt Framework & AI Content QA</div>
+          <div class="case-copy">A practical example of how I structure prompts, evaluate AI output, refine constraints, and validate K–12 learning content.</div>
+          <div class="link-row">
+            <a class="ext-link" href="https://www.linkedin.com/in/priyadharshini-c-g/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="ext-link" href="mailto:cgpriyadharshinigopi@gmail.com">Email ↗</a>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Prompt Engineering Workflow</div>
+          <div class="workflow">
+            <div class="workflow-step"><span>01</span>Understand</div>
+            <div class="workflow-step"><span>02</span>Design Prompt</div>
+            <div class="workflow-step"><span>03</span>Generate</div>
+            <div class="workflow-step"><span>04</span>Evaluate</div>
+            <div class="workflow-step"><span>05</span>Refine</div>
+            <div class="workflow-step"><span>06</span>Validate</div>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Prompt Template</div>
+          <div class="case-grid">
+            <div class="case-card">
+              <h4>Reusable K–12 concept prompt</h4>
+              <div class="case-code">ROLE: K–12 Science content developer for Grade 8 Science
+
+TASK: Generate a concept explanation for [TOPIC]
+
+CONSTRAINTS: simple language for age 13–14 · 180–220 words · flowing paragraphs · address a common misconception
+
+TONE: Friendly, clear, encouraging
+
+OUTPUT: hook → concept → equation/process → misconception → one-sentence summary</div>
+            </div>
+            <div class="case-card">
+              <h4>QC rubric I designed</h4>
+              <div class="case-code">Accuracy ................ 0–3
+Clarity .................. 0–3
+Grade-level fit .......... 0–2
+Misconception addressed .. 0–1
+CK-12 FlexBook alignment . 0–1
+
+TOTAL .................... /10</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Before → After Prompt Refinement</div>
+          <div class="case-card">
+            <p style="margin-bottom:.6rem;"><strong style="color:var(--red);">Initial:</strong> “Explain photosynthesis for students.”</p>
+            <p style="margin-bottom:.7rem;">Issues identified: language too advanced, no real-world hook, no misconception check, and textbook-like tone.</p>
+            <p><strong style="color:var(--mint);">After:</strong> A structured Grade 8 prompt with explicit tone, word count, equation, misconception, and output requirements.</p>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Project Evidence</div>
+          <img class="case-image" src="assets/genai-before-after.png" alt="Before and after AI output comparison for a Grade 8 photosynthesis explanation" onclick="openImage(this.src,this.alt)"/>
+          <div class="case-caption">Before/after comparison showing the initial AI output, issues identified, refined output, and QC checklist.</div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">What I evaluated</div>
+          <div class="case-grid">
+            <div class="case-card"><h4>Accuracy</h4><p>Scientific claims, equation balance, and correctness of the explanation.</p></div>
+            <div class="case-card"><h4>Grade-level fit</h4><p>Vocabulary, sentence complexity, tone, and whether the explanation is suitable for Grade 8.</p></div>
+            <div class="case-card"><h4>Misconceptions</h4><p>Whether a common student misunderstanding is addressed directly rather than merely avoided.</p></div>
+            <div class="case-card"><h4>Format compliance</h4><p>Word count, active voice, structure, and alignment with the content brief.</p></div>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <div class="case-section-title">Skills demonstrated</div>
+          <div class="aw-pills">
+            <span class="aw-pill">Prompt Engineering</span>
+            <span class="aw-pill">LLM Prompting</span>
+            <span class="aw-pill">Prompt Frameworks</span>
+            <span class="aw-pill">QC Rubric Design</span>
+            <span class="aw-pill">AI Content Evaluation</span>
+            <span class="aw-pill">K–12 Content Development</span>
+            <span class="aw-pill">CK-12 FlexBook Alignment</span>
+            <span class="aw-pill">ChatGPT</span>
+            <span class="aw-pill">Claude</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div id="imgLightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:5000;align-items:center;justify-content:center;padding:2rem;">
+    <button onclick="closeImage()" aria-label="Close image" style="position:absolute;top:1rem;right:1rem;background:transparent;color:var(--white);border:1px solid var(--border);padding:.5rem .8rem;font-family:var(--mono);cursor:pointer;">✕</button>
+    <img id="lightboxImg" src="" alt="" style="max-width:95vw;max-height:90vh;object-fit:contain;border:1px solid var(--border);box-shadow:0 20px 80px rgba(0,0,0,.8);"/>
   </div>
 
   <!-- SKILLS WINDOW -->
@@ -552,22 +684,21 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="win" id="win-skills" style="width:320px;height:360px;top:80px;left:300px;">
     <div class="win-chrome" id="wc-skills">
       <div class="win-dots">
-        <div class="wd r" onclick="closeWin('skills')"></div>
+        <button class="wd r" type="button" onclick="closeWin('skills')" aria-label="Close Skills window" title="Close window">×</button>
         <div class="wd y"></div>
         <div class="wd g"></div>
       </div>
       <div class="win-title">Skills.exe</div>
     </div>
 
-```
 <div class="win-body">
   <div class="skills-win-body">
 
     <div class="sw-item">
       <div class="sw-label">GENAI & PROMPT ENGINEERING</div>
       <div class="sw-vals">
-        LLMs · Prompt Design · Prompt Frameworks · Content Playbooks ·
-        QC Rubrics · AI Content Evaluation · ChatGPT · Claude · Gemini
+        Generative AI · LLM Prompting · Prompt Design · Prompt Frameworks & Templates ·
+        Content Playbooks · AI Content Evaluation · Rubrics & Checklists · ChatGPT · Claude · Gemini
       </div>
     </div>
 
@@ -581,7 +712,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
     <div class="sw-item">
       <div class="sw-label">DESIGN & UI</div>
       <div class="sw-vals">
-        Figma · Responsive Design · Cross-browser QA · WordPress-to-Webflow
+        Figma · Responsive Design · CMS · WordPress-to-Webflow
       </div>
     </div>
 
@@ -601,7 +732,6 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
   </div>
 </div>
-```
 
   </div>
 
@@ -610,25 +740,24 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
   <div class="win" id="win-terminal" style="width:440px;height:420px;top:120px;left:420px;">
     <div class="win-chrome" id="wc-terminal">
       <div class="win-dots">
-        <div class="wd r" onclick="closeWin('terminal')"></div>
+        <button class="wd r" type="button" onclick="closeWin('terminal')" aria-label="Close Chat.ai window" title="Close window">×</button>
         <div class="wd y"></div>
         <div class="wd g"></div>
       </div>
-      <div class="win-title">Chat.ai — Ask about Priya</div>
+      <div class="win-title">Chat.ai — Portfolio Q&A</div>
     </div>
 
-```
 <div class="win-body" style="display:flex;flex-direction:column;height:100%;">
   <div class="term-body">
 
     <div class="term-output" id="termOutput">
 
       <div class="term-line system">
-        // Priya.AI v1.0 — portfolio assistant
+        // Priya.AI v1.0 — static portfolio Q&A
       </div>
 
       <div class="term-line dim">
-        // Type a question. Press Enter to send.
+        // Type a question. Press Enter to send. No external API is connected.
       </div>
 
       <div class="term-line dim">
@@ -651,7 +780,6 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
   </div>
 </div>
-```
 
   </div>
 
@@ -659,10 +787,9 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
   <div class="win open focused" id="win-greeting" style="width:380px;height:auto;top:50%;left:50%;transform:translate(-50%,-50%);z-index:400;">
 
-```
 <div class="win-chrome" id="wc-greeting">
   <div class="win-dots">
-    <div class="wd r" onclick="closeGreeting()"></div>
+    <button class="wd r" type="button" onclick="closeGreeting()" aria-label="Close welcome window" title="Close window">×</button>
     <div class="wd y"></div>
     <div class="wd g"></div>
   </div>
@@ -683,14 +810,14 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
     <div style="font-size:.68rem;line-height:1.8;color:var(--muted);margin-bottom:1.2rem;">
 
-      You just generated my portfolio from a prompt.<br/>
-      Now you're inside it — an OS-style portfolio built by one person.<br/><br/>
+      You just ran a portfolio generation demo from a prompt.<br/>
+      Now you're inside Priya.OS — an OS-style portfolio built to show my work.<br/><br/>
 
-      <span style="color:var(--white);">Double-click any icon</span> on the desktop to explore.<br/>
+      <span style="color:var(--white);">Click any icon</span> on the desktop to explore.<br/>
 
-      <span style="color:var(--mint);">💬 Chat.ai</span> — ask about my work, skills, or experience.<br/>
+      <span style="color:var(--mint);">🧪 GenAI Lab</span> — see a prompt framework and AI content QA case study.<br/>
 
-      <span style="color:var(--white);">📄 Resume.pdf</span> — a quick overview of my background.<br/>
+      <span style="color:var(--white);">📄 Resume</span> — a quick overview of my background.<br/><span style="color:var(--gold);">× Close button</span> — use it to close the open window.<br/>
 
     </div>
 
@@ -710,13 +837,18 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
     </div>
 
+    <div class="link-row">
+      <a class="ext-link" href="https://www.linkedin.com/in/priyadharshini-c-g/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="ext-link" href="mailto:cgpriyadharshinigopi@gmail.com">Email ↗</a>
+      <a class="ext-link" href="https://github.com/cgpriyadharshinigopi-pixel" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+
     <button onclick="closeGreeting()" style="width:100%;padding:.65rem;background:var(--mint);color:#07070f;font-family:var(--mono);font-size:.65rem;font-weight:700;letter-spacing:.1em;border:none;cursor:none;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);">
       Enter Portfolio →
     </button>
 
   </div>
 </div>
-```
 
   </div>
 
@@ -724,7 +856,7 @@ body{background:var(--bg);color:var(--white);font-family:var(--mono);overflow:hi
 
   <div class="notify" id="notify">
     <strong id="notifyTitle">Welcome</strong>
-    <span id="notifyMsg">Double-click any icon to open.</span>
+    <span id="notifyMsg">Click any icon to open · use the × close button to close a window.</span>
   </div>
 
 </div>
@@ -781,27 +913,27 @@ const PD=[
   {t:'co',v:'// Madurai, Tamil Nadu, India · 2026'},
   {t:'bl'},
   {t:'la',v:'ROLE:'},
-  {t:'va',v:'  Generative AI Learning Content Developer · Prompt Engineer · Webflow Engineer'},
-  {t:'va',v:'  with 3+ years of professional experience.'},
+  {t:'va',v:'  Webflow Engineer | Generative AI Learning Content Developer'},
+  {t:'va',v:'  Focus: Prompt Design · LLM Prompting · AI Content Evaluation'},
   {t:'bl'},
   {t:'la',v:'CONTEXT:'},
-  {t:'va',v:'  CK-12 Foundation — AI-first EdTech platform.'},
-  {t:'va',v:'  Working on prompt frameworks, Content Playbooks, and K–12 learning content.'},
+  {t:'va',v:'  CK-12 Foundation — K–12 EdTech platform.'},
+  {t:'va',v:'  Working on prompt frameworks, content templates, AI content evaluation, and Webflow development.'},
   {t:'bl'},
   {t:'la',v:'SKILLS:'},
-  {t:'ke',k:'  genai:   ',v:'[ LLMs, Prompt Design, Prompt Frameworks, ChatGPT, Claude, Gemini ]'},
-  {t:'ke',k:'  content: ',v:'[ Content Playbooks, QC Rubrics, AI Content Evaluation, K–12 Curriculum ]'},
-  {t:'ke',k:'  webdev:  ',v:'[ Webflow, HTML5, CSS3, JS, React, PHP, WordPress, GitHub ]'},
-  {t:'ke',k:'  design:  ',v:'[ Figma, Responsive Design, Cross-browser QA ]'},
+  {t:'ke',k:'  genai:   ',v:'[ Generative AI, LLM Prompting, Prompt Design, ChatGPT, Claude, Gemini ]'},
+  {t:'ke',k:'  content: ',v:'[ Prompt Frameworks, Content Playbooks, QC Rubrics, AI Content Evaluation ]'},
+  {t:'ke',k:'  webdev:  ',v:'[ Webflow, HTML5, CSS3, JavaScript, React, WordPress, GitHub ]'},
+  {t:'ke',k:'  design:  ',v:'[ Figma, Responsive Design, CMS, SEO ]'},
   {t:'bl'},
   {t:'la',v:'ACHIEVEMENTS:'},
-  {t:'va',v:'  — Developed prompt frameworks and content templates for K–12 learning content'},
+  {t:'va',v:'  — Developed reusable prompt frameworks and content templates for K–12 Science and Math'},
+  {t:'va',v:'  — Reviewed AI-generated content for accuracy, clarity, grade-level suitability, and curriculum alignment'},
   {t:'va',v:'  — Migrated 38 WordPress pages to Webflow while maintaining SEO'},
   {t:'va',v:'  — Translated 100+ UI images into 10 Indian regional languages'},
   {t:'bl'},
   {t:'la',v:'OUTPUT_FORMAT:'},
-  {t:'va',v:'  A fully interactive OS-style portfolio.'},
-  {t:'va',v:'  Draggable windows. Portfolio assistant. Memorable experience.'},
+  {t:'va',v:'  An interactive OS-style portfolio with GenAI case studies, project evidence, and contact links.'},
   {t:'bl'},
   {t:'co',v:'// Ready. Click Generate to launch. ↓'},
 ];
@@ -882,13 +1014,13 @@ const SM=[
   'Generating OS environment...',
   'Building window components...',
   'Loading About.me module...',
-  'Compiling Resume.pdf...',
+  'Loading Resume window...',
   'Rendering Projects directory...',
   'Initialising Skills.exe...',
   'Booting portfolio assistant...',
   'Running final content quality check...',
   'Assembling desktop environment...',
-  'Portfolio OS generation complete ✓',
+  'Portfolio experience ready ✓',
 ];
 
 function startGen(){
@@ -954,47 +1086,49 @@ function startGen(){
 }
 
 /* PHASE 3 OS */
+
+function skipIntro(){
+  document.getElementById('ph1').style.display='none';
+  document.getElementById('ph2').style.display='none';
+  document.getElementById('pbar').style.width='100%';
+  document.getElementById('ph3').classList.add('show');
+  initGreetingDrag();
+}
+
+function openImage(src,alt){
+  const box=document.getElementById('imgLightbox');
+  const img=document.getElementById('lightboxImg');
+  img.src=src;
+  img.alt=alt||'Portfolio project image';
+  box.style.display='flex';
+}
+
+function closeImage(){
+  document.getElementById('imgLightbox').style.display='none';
+}
+
+function initGreetingDrag(){
+  const g=document.getElementById('win-greeting');
+  const gh=document.getElementById('wc-greeting');
+  if(gh._drag)return;
+  gh._drag=true;
+  let ox,oy,ix,iy;
+  gh.addEventListener('mousedown',e=>{
+    if(e.button!==0)return;
+    ox=g.offsetLeft; oy=g.offsetTop; ix=e.clientX; iy=e.clientY;
+    function move(ev){ g.style.left=(ox+ev.clientX-ix)+'px'; g.style.top=(oy+ev.clientY-iy)+'px'; g.style.transform='none'; }
+    function up(){document.removeEventListener('mousemove',move);document.removeEventListener('mouseup',up);}
+    document.addEventListener('mousemove',move); document.addEventListener('mouseup',up);
+  });
+}
+
 function showOS(){
 
   document.getElementById('ph2').style.display='none';
 
   document.getElementById('ph3').classList.add('show');
 
-  const g=document.getElementById('win-greeting');
-  const gh=document.getElementById('wc-greeting');
-
-  let ox,oy,ix,iy;
-
-  gh.addEventListener('mousedown',e=>{
-
-    if(e.button!==0)return;
-
-    ox=g.offsetLeft;
-    oy=g.offsetTop;
-    ix=e.clientX;
-    iy=e.clientY;
-
-    function move(e){
-
-      g.style.left=
-        (ox+e.clientX-ix)+'px';
-
-      g.style.top=
-        (oy+e.clientY-iy)+'px';
-
-      g.style.transform='none';
-    }
-
-    function up(){
-
-      document.removeEventListener('mousemove',move);
-      document.removeEventListener('mouseup',up);
-    }
-
-    document.addEventListener('mousemove',move);
-    document.addEventListener('mouseup',up);
-
-  });
+  initGreetingDrag();
 }
 
 /* WINDOW MANAGEMENT */
@@ -1005,7 +1139,8 @@ const wins={
   resume:'win-resume',
   projects:'win-projects',
   skills:'win-skills',
-  terminal:'win-terminal'
+  terminal:'win-terminal',
+  genai:'win-genai'
 };
 
 function openWin(name){
@@ -1143,7 +1278,7 @@ function closeGreeting(){
 
     showNotify(
       'Priya.OS',
-      'Explore freely — double-click any icon.'
+      'Explore freely — click any icon.'
     );
 
   },220);
@@ -1168,16 +1303,16 @@ function showNotify(title,msg){
 const aiResponses={
 
   'what do you do':
-    "I'm a Generative AI Learning Content Developer and Webflow Engineer at CK-12 Foundation. I work on prompt frameworks, content templates, AI content evaluation, and K–12 Science and Math learning content, alongside Webflow development.",
+    "I'm a Webflow Engineer and Generative AI Learning Content Developer at CK-12 Foundation. I work on prompt frameworks, content templates, AI content evaluation, and K–12 Science and Math learning content, alongside Webflow development.",
 
   'tell me about your genai work':
-    "My GenAI work focuses on prompt frameworks, Content Playbooks, quality-control rubrics, and reviewing AI-generated K–12 content. I test and refine prompts based on AI-generated responses to improve accuracy, consistency, relevance, and grade-level suitability.",
+    "My GenAI work focuses on prompt frameworks, content templates, QC rubrics, and reviewing AI-generated K–12 content. I test and refine prompts based on output quality to improve accuracy, consistency, relevance, and grade-level suitability.",
 
   'tell me about your webflow work':
     "I build and maintain Webflow pages at CK-12 Foundation. One of my main projects was migrating 38 WordPress pages to Webflow while maintaining SEO. I also build responsive landing pages from Figma designs using HTML, CSS, JavaScript, and React.",
 
   'what are your skills':
-    "My GenAI skills include LLMs, Prompt Design, Prompt Frameworks, Content Playbooks, QC Rubrics, and AI Content Evaluation. My web skills include Webflow, HTML5, CSS3, JavaScript, React, Bootstrap, PHP, and WordPress. I also work with Figma, SEO, CMS, and K–12 learning content.",
+    "My GenAI skills include Generative AI, LLM Prompting, Prompt Design, Prompt Frameworks & Templates, Content Playbooks, QC Rubrics, and AI Content Evaluation. My web skills include Webflow, HTML5, CSS3, JavaScript, React, Bootstrap, PHP, and WordPress. I also work with Figma, SEO, CMS, and K–12 learning content.",
 
   'where are you located':
     "I'm based in Madurai, Tamil Nadu, India. I'm open to Chennai, Bangalore, remote, and hybrid roles.",
@@ -1189,7 +1324,7 @@ const aiResponses={
     "I migrated 38 WordPress pages to Webflow while maintaining SEO and creating reusable page structures to support future migration work.",
 
   'what certifications do you have':
-    "I have completed Google Cloud's Generative AI Fundamentals certification. I have also completed training in Prompt Engineering for Developers through DeepLearning.AI.",
+    "I have completed Google Cloud's Generative AI Fundamentals. My DeepLearning.AI Prompt Engineering for Developers training is in progress.",
 
   'hello':
     "Hi there! I'm Priyadharshini's portfolio assistant. Ask me about her GenAI work, Webflow projects, skills, or experience.",
@@ -1204,10 +1339,10 @@ const aiResponses={
     "I'm open to discussing compensation based on the role and overall opportunity. You can reach me at cgpriyadharshinigopi@gmail.com to discuss further.",
 
   'do you know python':
-    "I have foundational Python knowledge and I'm continuing to build my skills in Python as part of my GenAI learning roadmap.",
+    "My current portfolio focuses on GenAI content, prompt design, AI content evaluation, and web development. Python is not presented as a core skill here.",
 
   'hire priya':
-    "Interested in connecting? 📧 cgpriyadharshinigopi@gmail.com — or find me on LinkedIn: linkedin.com/in/priyadharshini-c-g"
+    "You can reach me at cgpriyadharshinigopi@gmail.com or connect with me on LinkedIn."
 
 };
 
@@ -1296,6 +1431,8 @@ function handleTerm(e){
 
   },resp.length*18+200);
 }
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImage();});
 
 /* FOCUS TERMINAL */
 document.getElementById('win-terminal')
